@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+  }
+
+  thead {
+    display: table; /* to take the same width as tr */
+    width: calc(100% - 17px); /* - 17px because of the scrollbar width */
+  }
+  
+  tbody {
+    display: block; /* to enable vertical scrolling */
+    max-height: 430px; /* e.g. */
+    overflow-y: scroll; /* keeps the scrollbar even if it doesn't need it; display purpose */
+  }
+  
+  th, td {
+    width: 3%;
+    text-align: center;
+    word-break: break-all; /* 4. */
+  }
+  
+  tr {
+    display: table; /* display purpose; th's border */
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box; /* because of the border (Chrome needs this line, but not FF) */
+  }
+  
+  td {
+    text-align: center;
+    border-bottom: none;
+    border-left: none;
+  }
